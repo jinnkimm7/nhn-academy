@@ -12,4 +12,14 @@
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/helloservlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>nowServlet</servlet-name>
+        <servlet-class>com.nhnacademy.nowservlet.NowServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>nowServlet</servlet-name>
+        <url-pattern>/now</url-pattern>
+    </servlet-mapping>
 </web-app>
