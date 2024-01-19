@@ -32,4 +32,12 @@
         <servlet-name>nowServlet</servlet-name>
         <url-pattern>/now</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>setCookieServlet</servlet-name>
+        <servlet-class>com.nhnacademy.cookie.SetCookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setCookieServlet</servlet-name>
+        <url-pattern>/set-cookie</url-pattern>
+    </servlet-mapping>
 </web-app>
