@@ -1,11 +1,14 @@
 package com.nhnacademy.helloservlet;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.*;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
+@Slf4j
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
     private String message;
