@@ -14,7 +14,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
-        response.setCharacterEncoding("utf-8");
+//        response.setCharacterEncoding("utf-8");
         try(PrintWriter writer = response.getWriter()) {
             writer.println("<!DOCTYPE html>");
             writer.println("<html>");

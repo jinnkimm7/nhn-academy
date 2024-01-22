@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 public class NowServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
-        resp.setCharacterEncoding("UTF-8");
+//        resp.setCharacterEncoding("UTF-8");
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         LocalDateTime localDateTime = LocalDateTime.now();

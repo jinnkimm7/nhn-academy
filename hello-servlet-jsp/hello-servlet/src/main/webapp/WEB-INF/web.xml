@@ -10,7 +10,6 @@
         <error-code>404</error-code>
         <location>/error/404.html</location>
     </error-page>
-
     <error-page>
         <error-code>500</error-code>
         <location>/error/500.html</location>
@@ -23,7 +22,6 @@
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/helloservlet</url-pattern>
     </servlet-mapping>
-
     <servlet>
         <servlet-name>nowServlet</servlet-name>
         <servlet-class>com.nhnacademy.nowservlet.NowServlet</servlet-class>
@@ -40,4 +38,12 @@
         <servlet-name>setCookieServlet</servlet-name>
         <url-pattern>/set-cookie</url-pattern>
     </servlet-mapping>
+<!--    <filter>-->
+<!--        <filter-name>characterEncodingFilter</filter-name>-->
+<!--        <filter-class>com.nhnacademy.filter.CharacterEncodingFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>characterEncodingFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
 </web-app>
