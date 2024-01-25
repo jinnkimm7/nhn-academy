@@ -7,6 +7,13 @@
 <body>
 <h1><%= "Hello World!" %></h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<ul>
+  <li>
+    <a href="hello-servlet">Hello Servlet</a>
+  </li>
+  <li>
+    <a href="/student/list">학생 리스트</a>
+  </li>
+</ul>
 </body>
 </html>
