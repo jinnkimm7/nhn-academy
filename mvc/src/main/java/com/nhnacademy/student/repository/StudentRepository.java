@@ -10,7 +10,7 @@ public interface StudentRepository {
     //학생-수정
     void update(Student student);
     //학생-삭제
-    void deleteById(String id);
+    void deleteById(Long id);
     //학생-조회_by id
     Student getStudentById(String id);
     //학생-리스트

@@ -29,6 +29,10 @@
   </li>
   <li>
   <%--    <!-- todo 삭제버튼 구현, method=post--%>
+    <form method="post" action="/student/delete">
+      <input type="hidden" name="id" value="${student.id}" />
+      <button formmethod="post">삭제</button>
+    </form>
  </li>
 
 </ul>

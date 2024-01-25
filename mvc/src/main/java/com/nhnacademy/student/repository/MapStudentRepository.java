@@ -33,8 +33,8 @@ public class MapStudentRepository implements StudentRepository {
     }
 
     @Override
-    public void deleteById(String id) {
-        store.remove(Long.parseLong(id));
+    public void deleteById(Long id) {
+        store.remove(id);
     }
 
     @Override
