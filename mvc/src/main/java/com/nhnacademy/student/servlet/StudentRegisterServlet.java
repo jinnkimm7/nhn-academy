@@ -37,9 +37,9 @@ public class StudentRegisterServlet extends HttpServlet {
         String genderStr = req.getParameter("gender");
         int age = Integer.parseInt(req.getParameter("age"));
 
-        Gender gender = genderStr == "M" ? Gender.M : Gender.F;
-        Student student = new Student(name, gender, age, LocalDateTime.now());
+        Gender gender = genderStr.equals("M") ? Gender.M : Gender.F;
 
+        Student student = new Student(name, gender, age, LocalDateTime.now());
         studentRepository.save(student);
 
         resp.sendRedirect("/student/view?id=" + student.getId());
