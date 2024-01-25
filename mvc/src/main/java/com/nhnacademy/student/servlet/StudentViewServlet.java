@@ -23,6 +23,7 @@ public class StudentViewServlet extends HttpServlet {
         Student student = studentRepository.getStudentById(id);
 
         req.setAttribute("student", student);
+        req.setAttribute("action", "/student/register");
 
         String viewPath = "/WEB-INF/views/student/view.jsp";
         RequestDispatcher dispatcher = req.getRequestDispatcher(viewPath);

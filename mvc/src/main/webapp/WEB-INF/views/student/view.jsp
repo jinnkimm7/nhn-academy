@@ -22,10 +22,13 @@
   </tr>
 </table>
 <ul>
-  <li><a href="/student/list">리스트</a></li>
+  <li><a href="/student/list">학생 리스트</a></li>
   <li>
     <!-- todo ${update_link} 설정 c:url -->
-    <a href="${update_link}">수정</a>
+    <c:url var="updateUrl" value="/student/update">
+      <c:param name="id" value="${student.id}" />
+    </c:url>
+    <a href="${updateUrl}">수정</a>
   </li>
   <li>
   <%--    <!-- todo 삭제버튼 구현, method=post--%>
