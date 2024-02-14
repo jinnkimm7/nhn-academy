@@ -9,4 +9,7 @@
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.message.EmailMessageSender" scope="singleton" init-method="init" destroy-method="cleanup">
     </bean>
+    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService" >
+        <constructor-arg ref="emailMessageSender" />
+    </bean>
 </beans>
