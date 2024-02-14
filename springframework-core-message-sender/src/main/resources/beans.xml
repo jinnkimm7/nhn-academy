@@ -14,7 +14,10 @@
 <!--        <constructor-arg ref="emailMessageSender" />-->
 <!--    </bean>-->
 
-    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService" >
-        <property name="messageSender" ref="smsMessageSender" />
-    </bean>
+<!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService" >-->
+<!--        <property name="messageSender" ref="smsMessageSender" />-->
+<!--    </bean>-->
+
+    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService" autowire="byName"></bean>
+
 </beans>

@@ -8,7 +8,7 @@ public class MessageSendService {
 //    }
 
     public MessageSendService() {}
-    public void setMessageSender(MessageSender messageSender) {
+    public void setSmsMessageSender(MessageSender messageSender) {
         System.out.println("setMessageSender invoked!!");
         this.messageSender = messageSender;
     }

@@ -9,7 +9,7 @@ public class EmailMessageSender implements MessageSender {
     }
 
     public void init() {
-        System.out.println("EmailMessageSender initialized!!");
+        System.out.println("EmailMessageSender initialized!! - singleton");
     }
 
     public void cleanup() {

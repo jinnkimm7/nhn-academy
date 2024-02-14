@@ -9,7 +9,7 @@ public class SmsMessageSender implements MessageSender {
     }
 
     public void init() {
-        System.out.println("SmsMessageSender initialized!!");
+        System.out.println("SmsMessageSender initialized!! - prototype");
     }
     public void cleanup() {
         System.out.println("SmsMessageSender cleanup called!!");
