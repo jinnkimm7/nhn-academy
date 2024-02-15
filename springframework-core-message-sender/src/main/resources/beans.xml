@@ -8,11 +8,11 @@
     <context:annotation-config/>
 
 
-    <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.message.SmsMessageSender" scope="prototype" init-method="init" destroy-method="cleanup" primary="true">
-    </bean>
+<!--    <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.message.SmsMessageSender" scope="prototype" init-method="init" destroy-method="cleanup" primary="true">-->
+<!--    </bean>-->
 
-    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.message.EmailMessageSender" scope="singleton" init-method="init" destroy-method="cleanup">
-    </bean>
+<!--    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.message.EmailMessageSender" scope="singleton" init-method="init" destroy-method="cleanup">-->
+<!--    </bean>-->
 
 <!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService" >-->
 <!--        <constructor-arg ref="emailMessageSender" />-->
@@ -22,6 +22,6 @@
 <!--        <property name="messageSender" ref="smsMessageSender" />-->
 <!--    </bean>-->
 
-    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService"></bean>
+<!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService"></bean>-->
 
 </beans>

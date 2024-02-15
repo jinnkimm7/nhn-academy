@@ -9,6 +9,5 @@ public class AnnotationMain {
         MessageSendService messageSenderService = context.getBean("messageSendService", MessageSendService.class);
         messageSenderService.doSendMessage(user, "Hello");
 
-        String dbms = context.getBean("dbms", String.class);
     }
 }
