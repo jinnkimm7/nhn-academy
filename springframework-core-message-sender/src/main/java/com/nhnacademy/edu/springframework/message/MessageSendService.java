@@ -2,9 +2,11 @@ package com.nhnacademy.edu.springframework.message;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MessageSendService {
     // 같은 타입의 객체가 여러개 존재하는 경우, 배열이나 Collection 으로 의존성을 주입할 수 있습니다.
     private final MessageSender messageSenders;

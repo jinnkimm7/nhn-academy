@@ -1,27 +1,25 @@
 package com.nhnacademy.edu.springframework.message;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
+import org.springframework.stereotype.Service;
 
 @Configuration
-@ImportResource("classpath:/beans.xml")
+@ComponentScan(basePackages = "com.nhnacademy.edu.springframework.message")
 public class MainConfig {
-    @Bean(name = "smsMessageSender", initMethod = "init", destroyMethod = "cleanup")
+    @Bean(name = "smsMessageSender")
     @Scope("prototype")
     public MessageSender smsMessageSender() {
         return new SmsMessageSender();
     }
 
-    @Bean(name = "emailMessageSender", initMethod = "init", destroyMethod = "cleanup")
+    @Bean(name = "emailMessageSender")
     @Scope("singleton")
     public MessageSender emailMessageSender() {
         return new EmailMessageSender();
     }
 
-    @Bean
+    @Bean(name = "messageSendService")
     public MessageSendService messageSendService() {
-        return new MessageSendService(smsMessageSender());
+        return new MessageSendService(emailMessageSender());
     }
 }

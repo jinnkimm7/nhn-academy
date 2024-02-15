@@ -1,7 +1,9 @@
 package com.nhnacademy.edu.springframework.message;
 
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SmsMessageSender implements MessageSender {
     @Override
     public void sendMessage(User user, String message) {
