@@ -26,7 +26,7 @@ public class CsvScores implements Scores {
     // TODO 5 : score.csv 파일에서 데이터를 읽어 멤버 변수에 추가하는 로직을 구현하세요.
     @Override
     public void load() {
-        String filePath = "resources/data/score.csv";
+        String filePath = "/Users/jin/Study/nhn-academy/springframework-project1/src/test/resources/data/score.csv";
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
