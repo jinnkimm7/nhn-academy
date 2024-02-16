@@ -16,6 +16,14 @@ public class Student {
         this.score = score;
     }
 
+    public int getSeq() {
+        return seq;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Score getScore(){
         return this.score;
     }
