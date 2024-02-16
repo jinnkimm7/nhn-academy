@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CsvScores implements Scores {
     public static CsvScores instance;
-    private List<Score> scoreList = new ArrayList<>();
+    private List<Score> scoreList;
 
     private CsvScores(){
         this.scoreList = new ArrayList<>();

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CsvStudents implements Students {
     public static CsvStudents instance;
-    private List<Student> studentList = new ArrayList<>();
+    private List<Student> studentList;
     private CsvStudents() {
         this.studentList = new ArrayList<>();
     }
