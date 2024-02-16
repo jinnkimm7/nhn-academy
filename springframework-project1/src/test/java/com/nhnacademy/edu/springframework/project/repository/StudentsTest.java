@@ -1,20 +1,25 @@
 package com.nhnacademy.edu.springframework.project.repository;
 
+import com.nhnacademy.edu.springframework.project.service.Student;
 import org.junit.jupiter.api.Test;
+
+import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentsTest {
-
+    private Students students = CsvStudents.getInstance();
+    private Scores scores = CsvScores.getInstance();
     @Test
-    void load() {
-    }
+    void loadAndMergeAndFindAll() {
+        students.load();
+        scores.load();
 
-    @Test
-    void findAll() {
-    }
+        Collection<Student> loadedStudents = students.findAll();
 
-    @Test
-    void merge() {
+        students.merge(scores.findAll());
+
+        assertEquals(4, loadedStudents.size());
+        System.out.println(loadedStudents);
     }
 }
