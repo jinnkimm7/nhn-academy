@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 
 public class CsvStudents implements Students {
@@ -31,7 +32,7 @@ public class CsvStudents implements Students {
     // 데이터를 적재하고 읽기 위해서, 적절한 자료구조를 사용하세요.
     @Override
     public void load() {
-        String filePath = "resources/data/student.csv";
+        String filePath = "/Users/jin/Study/nhn-academy/springframework-project1/src/test/resources/data/student.csv";
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -59,6 +60,14 @@ public class CsvStudents implements Students {
      */
     @Override
     public void merge(Collection<Score> scores) {
+        for (Score score : scores) {
+            int studentSeq = score.getStudentSeq();
 
+            Optional<Student> matchingStudent = studentList.stream()
+                    .filter(student -> student.getSeq() == studentSeq)
+                    .findAny();
+
+            matchingStudent.ifPresent(student -> student.setScore(score));
+        }
     }
 }
